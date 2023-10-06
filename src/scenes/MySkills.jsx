@@ -1,13 +1,11 @@
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import { skillList } from "../utils/skillesData";
 
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
-  console.log(skillList);
   return (
-    <section id="skills" className="pt-10 pb-24">
+    <section id="about us" className="pt-10 pb-24">
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div
@@ -22,15 +20,20 @@ const MySkills = () => {
           }}
         >
           <p className="font-playfair font-semibold text-4xl mb-5">
-            MY <span className="text-red">SKILLS</span>
+            ABOUT <span className="text-yellow">US</span>
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            I have expertise in this technology HTML5, CSS3, javascript
-            (Es6),React js,React Router Dom,Redux Toolkit, Axios,React Hook
-            Form, Formik,Yup,Style Component,React Query,Next Js,Next
-            Auth,Tailwind CSS Bootstrap,Chakra Ui,Vue js,Vue
-            Router,Vuex,Pinia,Prime Vue,Git,Bitbucket,
+            Welcome to AAA Printing Solutions,
+            <br />
+            <br />
+            <br />
+            At AAA Printing Services, we understand the importance of keeping
+            your office equipment running smoothly. We are your one-stop
+            solution for all your printer and photocopier repair, maintenance
+            and accessory needs. With over 15 years of experience, our team of
+            highly trained technicians is dedicated to provide prompt and
+            reliable services to businesses of all sizes.
           </p>
         </motion.div>
 
@@ -50,36 +53,6 @@ const MySkills = () => {
             <img alt="skills" className="z-10" src="assets/skills-image.png" />
           )}
         </div>
-      </div>
-
-      {/* SKILLS */}
-      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 mt-16 gap-32">
-        {/* EXPERIENCE */}
-        {skillList.map((skill) => (
-          <motion.div
-          key={skill._id}
-            className=" "
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <div className="relative text-center h-32">
-              <div className="z-10">
-                <p className="font-playfair font-semibold text-3xl flex justify-center mt-3">
-                  < skill.icon className="" />
-                </p>
-                <p className="font-playfair font-semibold text-5xl mt-3">
-                  {skill.name}
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        ))}
       </div>
     </section>
   );

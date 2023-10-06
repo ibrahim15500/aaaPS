@@ -1,5 +1,8 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import cpt from "../assets/Cpflogo.png";
+import dsp from "../assets/dsp-logo.png";
+import pT from "../assets/pT.png";
 
 const Testimonials = () => {
   return (
@@ -16,21 +19,19 @@ const Testimonials = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <p className="font-playfair font-semibold text-4xl mb-5 text-red">
+        <p className="font-playfair font-semibold text-4xl mb-5 text-white">
           TESTIMONIALS
         </p>
         <LineGradient width="mx-auto w-2/5" />
         <p className="mt-10">
-          Here's What People are Saying About My Work. Aliquam aliquet integer
-          ut fames odio in at. At magna ornare dictum lectus.
+          Here's our satisfied clients come from various sectors, including:
         </p>
       </motion.div>
 
       {/* TESTIMONIALS */}
-      <div className="md:flex md:justify-between gap-8">
+      <div className="md:flex md:justify-between gap-8 mt-[40px]">
         <motion.div
-          className="mx-auto relative bg-blue max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
-            before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person1"
+          className=" bg-blue  p-16 mt-[10px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -40,15 +41,15 @@ const Testimonials = () => {
             visible: { opacity: 1, scale: 1 },
           }}
         >
-          <p className="font-playfair text-6xl">“</p>
-          <p className="text-center text-xl">
-            A auctor pharetra hendrerit mattis amet etiam interdum platea.
-          </p>
+          <div className="w-full flex justify-center">
+            <img src={cpt} alt="logo" className="w-[100px]" />
+          </div>
+          <p className="font-playfair text-6xl">“ </p>
+          <p className="text-center text-xl">Charoen Pokphand</p>
         </motion.div>
 
         <motion.div
-          className="mx-auto relative bg-red max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
-            before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person2"
+          className=" bg-red  p-16 mt-[10px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -58,16 +59,15 @@ const Testimonials = () => {
             visible: { opacity: 1, scale: 1 },
           }}
         >
+          <div className="w-full flex justify-center">
+            <img src={dsp} alt="logo" className="w-[100px]" />
+          </div>
           <p className="font-playfair text-6xl">“</p>
-          <p className="text-center text-xl">
-            Aliquam aliquet integer ut fames odio in at. At magna ornare dictum
-            lectus.
-          </p>
+          <p className="text-center text-xl">Daman Support Programme</p>
         </motion.div>
 
         <motion.div
-          className="mx-auto relative bg-yellow max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
-            before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person3"
+          className="bg-yellow  p-16 mt-[10px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -77,10 +77,11 @@ const Testimonials = () => {
             visible: { opacity: 1, scale: 1 },
           }}
         >
+          <div className="w-full flex justify-center">
+            <img src={pT} alt="logo" className="w-[100px]" />
+          </div>
           <p className="font-playfair text-6xl">“</p>
-          <p className="text-center text-xl">
-            Fames odio in at. At magna ornare dictum lectus.
-          </p>
+          <p className="text-center text-xl">Platform Turizm</p>
         </motion.div>
       </div>
     </section>

@@ -2,14 +2,14 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import profile from '../assets/profile.png'
+import contactimage from "../assets/hero-img1.webp";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
+      className="md:flex md:justify-between md:items-center gap-16 md:h-full py-[90px]"
     >
       {/* IMAGE SECTION */}
       <div className="basis-3/5 z-10  md:mt-6 flex justify-center md:order-2">
@@ -21,14 +21,14 @@ const Landing = ({ setSelectedPage }) => {
             <img
               alt="profile"
               className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
-              src={profile}
+              src={contactimage}
             />
           </div>
         ) : (
           <img
             alt="profile"
             className="z-10 w-full max-w-[400px] md:max-w-[600px]"
-            src={profile}
+            src={contactimage}
           />
         )}
       </div>
@@ -46,18 +46,25 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Haroon {""}
+          <p className="text-[25px] lg:text-6xl font-playfair z-10 text-center md:text-start">
+            AAA {""}
             <span
               className="xs:relative  xs:font-semibold z-20 xs:before:content-brush
               before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
             >
-              Irshad
+              PRINTING SOLUTIONS
             </span>
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            My name is Haroon Irshad. I'm a Software Engineer.
+            Why Choose AAA Printing Services? Experienced Technicians: Our
+            skilled technicians have years of experience in diagnosing and
+            repairing printer and photocopier issues. Fast Response: We
+            understand that downtime can be costly. Our team responds promptly
+            to your service requests. Quality Parts: We use only quality parts
+            and supplies to ensure the longevity and reliability of your
+            equipment. Competitive Pricing: Our services are competitively
+            priced, and we offer flexible service plans to fit your budget.
           </p>
         </motion.div>
 

@@ -1,6 +1,9 @@
 import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import {AiOutlineMail} from 'react-icons/ai';
+import {BsTelephone} from 'react-icons/bs';
+import {BiCurrentLocation} from 'react-icons/bi';
 
 const Contact = () => {
   const {
@@ -29,18 +32,44 @@ const Contact = () => {
           hidden: { opacity: 0, x: 50 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="flex justify-end w-full"
+        className="flex w-full"
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
             <span className="text-yellow">CONTACT ME</span> TO GET STARTED
           </p>
-          <div className="flex md:justify-end my-5">
+          <div className="flex  my-5">
             <LineGradient width="w-1/2" />
           </div>
         </div>
       </motion.div>
-
+      <div className="grid grid-col-1 md:grid-cols-3 gap-4 my-[30px]">
+        <div>
+          <div className="flex gap-2 text-[17px] items-center text-yellow">
+            <AiOutlineMail/>
+            <h2 className="font-semibold">EMAIL</h2>
+          </div>
+          <p className="text-[17px]">aaaprintingsolutions978@gmail.com</p>
+        </div>
+        <div>
+          <div>
+          <div className="flex gap-2 text-[17px] items-center text-yellow">
+            <BsTelephone/>
+            <h2 className="font-semibold">PHONE</h2>
+          </div>
+          </div>
+          <p className="text-[17px]">0309-2247673</p>
+        </div>
+        <div>
+          <div>
+          <div className="flex gap-2 text-[17px] items-center text-yellow">
+            <BiCurrentLocation/>
+            <h2 className="font-semibold">ADDRESS</h2>
+          </div>
+          </div>
+          <p className="text-[17px]">Address: 42-Lower Mall, Lahore</p>
+        </div>
+      </div>
       {/* FORM & IMAGE */}
       <div className="md:flex md:justify-between gap-16 mt-5">
         <motion.div
@@ -52,7 +81,7 @@ const Contact = () => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="basis-1/2 flex justify-center"
+          className="basis-1/2 flex"
         >
           <img src="../assets/contact-image.jpeg" alt="contact" />
         </motion.div>
